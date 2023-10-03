@@ -41,7 +41,8 @@ Threads and Coroutine differ in how each task take turns to execute
 - Thread: Controlled by the OS, OS handle the interruption and execution of each thread, OS can interrupt threads **at any time** (preemptive multitasking).
 - Coroutine: Developers/Programming languages determine when to switch coroutine, each coroutine announce when it will be swapped out (cooperative multitaksing). Coroutine is cheaper to do context switch
 
-<code>asyncio</code> vs <code>threading</code>
+<code>asyncio</code> vs <code>threading</code>:
+
 In addition to the difference between couroutine and thread, <code>asyncio</code> also has an event loop which tracks different I/O events and switches to tasks which are ready and pauses the ones which are waiting on I/O.
 asyncio scales better than threading. Each task takes far fewer resources and less time to create than a thread, so creating and running more of them works well.
 
