@@ -21,8 +21,11 @@ Running a program concurrently does not guarantee it to run faster. Concurrency 
 Let looks at examples in file <code>demo/demo_sequential.py</code> and <code>demo/demo_concurrent_thread_old.py</code>
 In the <code>demo/demo_sequential.py</code> file the program is executed like the below figure.
 <img src="img/normal_execution.svg">
+
 The program <code>demo/demo_concurrent_thread_old.py</code> is executed concurrently as follow:
+
 <img src="img/concurrent_execution.svg">
+
 This is because when <code>time.sleep(1)</code> is called, the CPU idles (IO task), thus allow the it to execute next function immediately (concurrently). If the CPU is not idle, running the program concurrently can make it slower due to time taken to create and destroy threads. Thus, concurrency can help IO bound program run faster.
 
 In conclusion, if a program is IO bound, use concurrency with <code>asyncio</code> or <code>threading</code>. Else if the program is CPU intensive, use <code>multiprocessing</code>.
@@ -65,11 +68,11 @@ else:
 
 
 ## References
-https://realpython.com/python-concurrency/
-http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/
-https://stackoverflow.com/questions/27435284/multiprocessing-vs-multithreading-vs-asyncio
-https://stackoverflow.com/questions/1934715/difference-between-a-coroutine-and-a-thread
-https://sekiro-j.github.io/post/tcp/
-https://www.youtube.com/watch?v=IEEhzQoKtQU
-https://www.youtube.com/watch?v=fKl2JW_qrso
-https://www.youtube.com/watch?v=t5Bo1Je9EmE
+- https://realpython.com/python-concurrency/
+- http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/
+- https://stackoverflow.com/questions/27435284/multiprocessing-vs-multithreading-vs-asyncio
+- https://stackoverflow.com/questions/1934715/difference-between-a-coroutine-and-a-thread
+- https://sekiro-j.github.io/post/tcp/
+- https://www.youtube.com/watch?v=IEEhzQoKtQU
+- https://www.youtube.com/watch?v=fKl2JW_qrso
+- https://www.youtube.com/watch?v=t5Bo1Je9EmE
