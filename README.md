@@ -1,6 +1,6 @@
 # How to use asyncio, threading and multiprocessing
 
-Note: asynchronous and sychronous refer to the conceptual programming model, whereas concurrency and parallelism describe how the actual processes/threads are executed.
+Note: asynchronous and synchronous refer to the conceptual programming model, whereas concurrency and parallelism describe how the actual processes/threads are executed.
 
 ## Async vs Sync
 - Synchronous: A task must wait for the previous task to finish executing (blocking operations)
