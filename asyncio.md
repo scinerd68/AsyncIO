@@ -4,7 +4,7 @@ In <code>asyncio</code>, Python will not pause a coroutine and allow something e
 
 ```await```: wait here until something is done
 
-```asyncio.create_task()```: wrap coroutine in task object and schedule it in the event loops, it does not ```await`````` task immediately, allow schedule multiple tasks before waiting on them
+```asyncio.create_task()```: wrap coroutine in task object and schedule it in the event loops, it does not ```await``` task immediately, allow schedule multiple tasks before waiting on them
 
 ```asyncio.wait()```: wait on specified tasks
 
